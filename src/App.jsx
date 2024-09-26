@@ -3,10 +3,8 @@ import './App.css';
 import Movie from "./pages/Movie";
 import SinglePage from "./pages/singlePage/SinglePage";
 import Mode from "./components/mode/Mode";
-import { useContext, createContext, useState, useEffect } from 'react';
-
-
-const ThemeContext = createContext();
+import { useContext, useState, useEffect } from 'react';
+import { ThemeContext } from "./components/mode/Mode";
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {

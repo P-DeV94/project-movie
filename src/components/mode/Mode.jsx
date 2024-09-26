@@ -1,8 +1,9 @@
 import './mode.css';
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa6";
-import { ThemeContext } from "../../store/themeContext";
-import { useContext } from "react";
+import { useContext, createContext } from "react";
+
+export const ThemeContext = createContext(); 
 
 const Mode = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
