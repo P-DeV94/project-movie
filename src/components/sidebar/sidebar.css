@@ -1,0 +1,37 @@
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 1rem;
+  position: sticky;
+}
+
+.check-list {
+  max-height: 200px;
+  height: 100%;
+  overflow-y: hidden;
+  border-bottom: 1px solid #d1d5db;
+  overflow-y: scroll;
+}
+
+.check-list.show {
+  max-height: 100%;
+}
+
+.sidebar-input label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.sidebar-input input {
+  padding: 8px 1rem;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #d1d5db;
+}
+
+.sidebar-input input:focus {
+  border: 2px solid #06b6d4;
+}
