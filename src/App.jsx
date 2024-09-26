@@ -3,8 +3,8 @@ import './App.css';
 import Movie from "./pages/Movie";
 import SinglePage from "./pages/singlePage/SinglePage";
 import Mode from "./components/mode/Mode";
-import ThemeContext from "./store/themeContext";
-import ThemeProvider from "./store/themeContext";
+import {ThemeContext} from "./store/themeContext";
+import {ThemeProvider} from "./store/themeContext";
 import { useContext } from 'react';
 
 function App() {
