@@ -1,9 +1,11 @@
 import { createContext, useState, useEffect } from 'react';
 
- export const ThemeContext = createContext();
+// Creiamo il contesto come export default
+const ThemeContext = createContext();
+export default ThemeContext;
 
- export const ThemeProvider = ({ children }) => {
-
+// ThemeProvider è anche export default
+const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -22,3 +24,5 @@ import { createContext, useState, useEffect } from 'react';
     </ThemeContext.Provider>
   );
 };
+
+export { ThemeProvider as default };
