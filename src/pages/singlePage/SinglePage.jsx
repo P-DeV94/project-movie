@@ -9,10 +9,10 @@ import './singlePage.css';
 
 const SinglePage = () => {
   const { id } = useParams();
-  const { data: movieID, error, isLoading } = useFetch(`${import.meta.env.VITE_END_POINT_MOVIE_BY_ID}/${id}&language=it-IT`);
-  const { data: castItems, isLoading: isCastLoading } = useFetch(`${import.meta.env.VITE_END_POINT_MOVIE_BY_ID}/${id}/credits`);
-  const { data: movieVideo, isLoading: isVideoLoading } = useFetch(`${import.meta.env.VITE_END_POINT_MOVIE_BY_ID}/${id}/videos`);
-  const { data: movieReviews, isLoading: isReviewsLoading } = useFetch(`${import.meta.env.VITE_END_POINT_MOVIE_BY_ID}/${id}/reviews`);
+  const { data: movieID, error, isLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}&language=it-IT`);
+  const { data: castItems, isLoading: isCastLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}/credits`);
+  const { data: movieVideo, isLoading: isVideoLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos`);
+  const { data: movieReviews, isLoading: isReviewsLoading } = useFetch(`https://api.themoviedb.org/3/movie/${id}/reviews`);
 
   if (isLoading || isCastLoading || isVideoLoading || isReviewsLoading ) return <Spinner />;
   if (error) return <p>Errore: {error}</p>;

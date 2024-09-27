@@ -12,9 +12,9 @@ const Movie = () => {
   const [numberGenres, setNumberGenres] = useState(null);
 
   const { data: movies, error: moviesError, isLoading: isMoviesLoading } = useFetch(
-    query ? (`${import.meta.env.END_POINT_SEARCH_MOVIE}?query=${query}&page=${page}&language=it-IT`) :
-      numberGenres ? (`${import.meta.env.END_POINT_MOVIE}?page=${page}&with_genres=${numberGenres}&language=it-IT`) :
-        `${import.meta.env.END_POINT_MOVIE}?page=${page}&language=it-IT`
+    query ? (`https://api.themoviedb.org/3/discover/movie?query=${query}&page=${page}&language=it-IT`) :
+      numberGenres ? (`https://api.themoviedb.org/3/discover/movie?page=${page}&with_genres=${numberGenres}&language=it-IT`) :
+        `https://api.themoviedb.org/3/discover/movie?page=${page}&language=it-IT`
   );
 
   return (
